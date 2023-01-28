@@ -7,4 +7,5 @@
 python checkin.py
 ```
 > 每日自动签到需要一个服务器
-[便宜高手但是需要缴费且无签到机场](https://paopao.dog/#/register?code=Hcni1jBo)
+
+[便宜高速但是需要缴费且无签到机场](https://paopao.dog/#/register?code=Hcni1jBo)
