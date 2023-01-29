@@ -1,4 +1,3 @@
-#/bin/python3
 def checkin(Email,passwd):
     import requests
     url="https://go.runba.cyou/auth/login"
@@ -21,12 +20,13 @@ def checkin(Email,passwd):
     if resp2.status_code==200:
         if resp2.json().get("ret")==1:
             print("*"*10+"签到成功"+10*"*")
-            print("签到获得流量==>",res[0])
-            print("剩余流量==>",res[0])
-            print("已经使用==>",res[0])
-            print("已经使用==>",res[0])
+            print("签到获得流量==>",resp2.json().get('msg'))
+            print("剩余流量==>",resp2.json().get('trafficInfo').get('unUsedTraffic'))
+            print("已经使用==>",resp2.json().get('trafficInfo').get('lastUsedTraffic'))
+            print("今日使用==>",resp2.json().get('trafficInfo').get('todayUsedTraffic'))
         else:
             print(resp2.json().get("msg"))
+    return resp2
 checkin('xxxx@qq.com','xxxx')
 
 
